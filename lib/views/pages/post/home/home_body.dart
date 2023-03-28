@@ -7,11 +7,17 @@ class HomeBody extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Column(
-      children: [
-        HomeBodyBanner(),
-        HomeBodyPopular(),
-      ],
+
+    double bodyHPadding = MediaQuery.of(context).size.width * 0.15;
+
+    return Padding(
+      padding: EdgeInsets.symmetric(horizontal: bodyHPadding),
+      child: Column(
+        children: [
+          HomeBodyBanner(),
+          HomeBodyPopular(),
+        ],
+      ),
     );
   }
 }
