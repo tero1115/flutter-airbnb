@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_airbnb/views/pages/post/home/home_body.dart';
+import 'package:flutter_airbnb/views/pages/post/home/home_header.dart';
 
 class HomePage extends StatelessWidget {
   const HomePage({Key? key}) : super(key: key);
@@ -6,7 +8,12 @@ class HomePage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      body: Placeholder(),
+      body: ListView(
+        children: [
+          HomeHeader(),
+          HomeBody(),
+        ],
+      ),
     );
   }
 }
